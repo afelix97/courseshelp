@@ -1,0 +1,30 @@
+<mat-drawer-container
+  class="contenedor-drawer"
+  [hasBackdrop]="isMobileDevice() ? !hasBackdrop : hasBackdrop"
+>
+  <mat-drawer
+    #drawer
+    [mode]="isMobileDevice() ? mode[2] : mode[0]"
+    [opened]="showNavLeft"
+    class="drawer text-dark bg-gradient border-danger-subtle border-end border-4"
+  >
+    <app-nav-left />
+    @if (isMobileDevice()) {
+    <button
+      class="btn btn-sm btn-secondary w-100 position-absolute bottom-0"
+      (click)="hiddeMenuLeft()"
+    >
+      Ocultar Menu
+    </button>
+    }
+  </mat-drawer>
+  <mat-drawer-content
+    class="bg-content"
+    [class]="isViewWelcome ? 'bg-gradient bg-light' : ''"
+  >
+    <div class="background-image">
+      <app-nav-top [drawer]="drawer" />
+      <router-outlet />
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,32 @@
+.contenedor-drawer{
+  height: 100%;
+}
+.background-image {
+  /*establecer una imagen como fondo*/
+ /*background-image: url('/img/background/Pink_triangle_vector_4K_abstract_design_1366x768.jpg');*/
+ background-color: rgb(255, 249, 249);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilo específico para dispositivos móviles */
+@media (max-width: 600px) {
+  .background-image {
+    /*establecer una imagen como fondo*/
+    background-image: url('/img/background/900w-jINjEbkR0ps-mobile.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.drawer{
+   /*establecer una imagen como fondo*/
+   background-image: url('/img/background/1600w-h_F-FdyBGSk.webp') !important;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+}

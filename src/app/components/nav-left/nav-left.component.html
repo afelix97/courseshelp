@@ -1,0 +1,22 @@
+<a class="navbar-brand animated" [routerLink]="['welcome']">
+  <div class="text-center">
+    <img
+      alt="logo sistema"
+      class="img-fluid logoNav"
+      src="img/logo/courseshelp.png"
+    />
+  </div>
+</a>
+<mat-divider></mat-divider>
+
+@for (link of routesLinks; track link) {
+<a [routerLink]="link.url" routerLinkActive="active" class="list-item-link">
+  <mat-list-item class="list-item">
+    <mat-icon matListItemIcon>{{ link.icon }}</mat-icon>
+    <div matListItemTitle class="ps-2">
+      <b> {{ link.name }}</b>
+    </div>
+  </mat-list-item>
+</a>
+<mat-divider></mat-divider>
+}
