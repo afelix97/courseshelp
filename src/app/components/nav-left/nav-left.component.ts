@@ -27,14 +27,17 @@ export class NavLeftComponent {
       name: 'Blog',
       icon: 'web',
       url: 'users'
-    },{
+    }, {
       name: 'Contactanos',
       icon: 'phone',
       url: 'help'
-    },
-    {
+    }, {
       name: '¿Quienes somos?',
       icon: 'info',
+      url: 'help'
+    }, {
+      name: 'Ayuda',
+      icon: 'help',
       url: 'help'
     }, {
       name: 'Configuracion',
