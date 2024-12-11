@@ -40,3 +40,21 @@ img:hover {
   transform: scale(1.03);
   transition: transform 0.3s ease-in-out;
 }
+
+
+/* Para pantallas menores a 768px (un tamaño común para tablets) */
+@media (max-width: 600px) {
+  h1{
+    font-size:6vw !important;
+  }
+  p{
+    font-size:4vw !important;
+  }
+  .carousel-caption{
+    padding: 5px;
+    bottom: 8vw;
+  }
+  .carousel-item {
+    height: 24rem;
+  }
+}
