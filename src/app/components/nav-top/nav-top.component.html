@@ -11,14 +11,16 @@
         <mat-icon class="m-0 icons-options">menu</mat-icon>
       }
     </button>
-    @if(!fullScreenGestor){
-      <button mat-raised-button (click)="openFullscreen()" class="rounded-pill ">
-        <mat-icon class="m-0 icons-options">fullscreen</mat-icon>
-      </button>
-    } @else {
-      <button mat-raised-button (click)="closeFullscreen()" class="rounded-pill ">
-        <mat-icon class="m-0 icons-options">fullscreen_exit</mat-icon>
-      </button>
+    @if (!isMobileDevice()) {
+      @if(!fullScreenGestor){
+          <button mat-raised-button (click)="openFullscreen()" class="rounded-pill ">
+            <mat-icon class="m-0 icons-options">fullscreen</mat-icon>
+          </button>
+        } @else {
+          <button mat-raised-button (click)="closeFullscreen()" class="rounded-pill ">
+            <mat-icon class="m-0 icons-options">fullscreen_exit</mat-icon>
+          </button>
+      }
     }
   </div>
 

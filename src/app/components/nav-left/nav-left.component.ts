@@ -22,11 +22,11 @@ export class NavLeftComponent {
     }, {
       name: 'Cursos',
       icon: 'local_library',
-      url: 'users'
+      url: 'cursos'
     }, {
       name: 'Blog',
       icon: 'web',
-      url: 'users'
+      url: 'blog'
     }, {
       name: 'Contactanos',
       icon: 'phone',
@@ -42,7 +42,7 @@ export class NavLeftComponent {
     }, {
       name: 'Configuracion',
       icon: 'dns',
-      url: 'settings-proxy'
+      url: 'configuraciones'
     },
   ];
 }
