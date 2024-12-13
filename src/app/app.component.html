@@ -11,10 +11,10 @@
     <app-nav-left [drawer]="drawer" />
     @if (isMobileDevice()) {
     <button mat-raised-button
-      class="w-100 position-absolute bottom-0"
+      class=" w-100 position-absolute bottom-0"
       (click)="hiddeMenuLeft()"
     >
-      <mat-icon matListItemIcon>menu_open</mat-icon>
+      <mat-icon matListItemIcon class="m-0 icons-options">menu_open</mat-icon>
     </button>
     }
   </mat-drawer>
