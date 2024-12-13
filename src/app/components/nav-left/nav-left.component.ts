@@ -1,10 +1,12 @@
 import { CommonModule, DatePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterLink, RouterModule } from '@angular/router';
 import { LinkSectionNavInterface } from './interfaces/link-section-nav.interface';
+import { MatDrawer } from '@angular/material/sidenav';
+import { AppService } from '@services/app.service';
 
 @Component({
   selector: 'app-nav-left',
@@ -45,4 +47,23 @@ export class NavLeftComponent {
       url: 'configuraciones'
     },
   ];
+
+  @Input() drawer!: MatDrawer;
+  appService: AppService = inject(AppService);
+
+  isMobilehiddeMenu() {
+    if (this.isMobileDevice()) {
+      this.ocultarMenu();
+    }
+  }
+
+  ocultarMenu() {
+    this.drawer.toggle();
+
+    this.appService.setStatusNavBar((!this.appService.isExpandNavBar()).toString());
+  }
+
+  isMobileDevice(): boolean {
+    return window.innerWidth <= 600;
+  }
 }

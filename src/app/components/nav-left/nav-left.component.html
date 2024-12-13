@@ -10,7 +10,7 @@
 <mat-divider></mat-divider>
 
 @for (link of routesLinks; track link) {
-<a [routerLink]="link.url" routerLinkActive="active" class="list-item-link">
+<a [routerLink]="link.url" routerLinkActive="active" class="list-item-link" (click)="isMobilehiddeMenu()">
   <mat-list-item class="list-item">
     <mat-icon matListItemIcon>{{ link.icon }}</mat-icon>
     <div matListItemTitle class="ps-2">

@@ -8,7 +8,7 @@
     [opened]="showNavLeft"
     class="drawer text-dark bg-gradient border-danger-subtle border-end border-4"
   >
-    <app-nav-left />
+    <app-nav-left [drawer]="drawer" />
     @if (isMobileDevice()) {
     <button mat-raised-button
       class="w-100 position-absolute bottom-0"
