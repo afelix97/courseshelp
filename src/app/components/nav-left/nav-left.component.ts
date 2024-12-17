@@ -32,7 +32,7 @@ export class NavLeftComponent {
     }, {
       name: 'Contactanos',
       icon: 'phone',
-      url: 'help'
+      url: 'contacto'
     }, {
       name: '¿Quienes somos?',
       icon: 'info',
