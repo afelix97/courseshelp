@@ -1,44 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
-
 .error-container {
   text-align: center;
   font-size: 180px;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'calibri', sans-serif;
   font-weight: 800;
   margin: 20px 15px;
 }
 
-.error-container>span {
+.error-container span {
   display: inline-block;
   line-height: 0.7;
   position: relative;
   color: #FFB485;
 }
 
-.error-container>span {
+.error-container span {
   display: inline-block;
   position: relative;
   vertical-align: middle;
 }
 
-.error-container>span:nth-of-type(1) {
+.error-container span:nth-of-type(1) {
   color: #D1F2A5;
   animation: colordancing 4s infinite;
 }
 
-.error-container>span:nth-of-type(3) {
+.error-container span:nth-of-type(3) {
   color: #F56991;
   animation: colordancing2 4s infinite;
 }
 
-.error-container>span:nth-of-type(2) {
+.error-container span:nth-of-type(2) {
   width: 120px;
   height: 120px;
   border-radius: 999px;
 }
 
-.error-container>span:nth-of-type(2):before,
-.error-container>span:nth-of-type(2):after {
+.error-container span:nth-of-type(2):before,
+.error-container span:nth-of-type(2):after {
   border-radius: 0%;
   content: "";
   position: absolute;
@@ -54,7 +52,7 @@
   animation: shadowsdancing 4s infinite;
 }
 
-.error-container>span:nth-of-type(2):before {
+.error-container span:nth-of-type(2):before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
