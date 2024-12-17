@@ -141,12 +141,17 @@
 
 .card:hover {
   border-top-left-radius: 55px;
+
 }
 
 .card:hover .bottom {
   top: 20%;
   border-radius: 80px 29px 29px 29px;
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+.card:hover .button {
+  transition: 1s;
+  display: none;
 }
 
 .card:hover .profile-pic {
