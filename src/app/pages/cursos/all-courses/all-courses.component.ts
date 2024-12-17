@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-cursos',
-  imports: [],
-  templateUrl: './cursos.component.html',
-  styleUrl: './cursos.component.scss'
+  selector: 'app-all-courses',
+  imports: [RouterModule, MatButtonModule],
+  templateUrl: './all-courses.component.html',
+  styleUrl: './all-courses.component.scss'
 })
-export class CursosComponent {
+export class AllCoursesComponent {
 
   listCursos: any = [];
 
@@ -103,6 +105,5 @@ export class CursosComponent {
       }
     ]
   }
-
 
 }
