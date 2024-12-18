@@ -248,5 +248,8 @@
 
 /* Para pantallas menores a 768px (un tamaño común para tablets) */
 @media (max-width: 600px) {
-
+  .text-box .formatting button {
+    width: 50px;
+    height: 50px;
+  }
 }
