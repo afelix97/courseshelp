@@ -21,6 +21,12 @@
             <mat-icon class="m-0 icons-options">fullscreen_exit</mat-icon>
           </button>
       }
+    } @else {
+      <button mat-raised-button [matMenuTriggerFor]="menuConfig" class="rounded-pill m-1"><mat-icon class="m-0 icons-options">settings</mat-icon></button>
+      <mat-menu #menuConfig="matMenu" xPosition="after" class="bg-dark">
+        <a routerLink="perfil" mat-menu-item class="text-white border"><mat-icon class="text-white">account_circle</mat-icon> Perfil</a>
+        <button mat-menu-item class="text-white"><mat-icon class="text-danger">power_settings_new</mat-icon> Cerrar Sesión</button>
+      </mat-menu>
     }
   </div>
 
@@ -29,11 +35,13 @@
 
     </ul>
     <div class="d-flex">
-      <button mat-raised-button [class.w-100]="isMobileDevice()" [matMenuTriggerFor]="menuConfig" class="btn-config rounded-pill">Nombre usuario <mat-icon>settings</mat-icon></button>
-      <mat-menu #menuConfig="matMenu" xPosition="after" class="bg-dark">
-        <a routerLink="perfil" mat-menu-item class="text-white border"><mat-icon class="text-white">account_circle</mat-icon> Perfil</a>
-        <button mat-menu-item class="text-white"><mat-icon class="text-danger">power_settings_new</mat-icon> Cerrar Sesión</button>
-      </mat-menu>
+      @if (!isMobileDevice()) {
+        <button mat-raised-button [class.w-100]="isMobileDevice()" [matMenuTriggerFor]="menuConfig" class="btn-config rounded-pill">Nombre usuario <mat-icon>settings</mat-icon></button>
+        <mat-menu #menuConfig="matMenu" xPosition="after" class="bg-dark">
+          <a routerLink="perfil" mat-menu-item class="text-white border"><mat-icon class="text-white">account_circle</mat-icon> Perfil</a>
+          <button mat-menu-item class="text-white"><mat-icon class="text-danger">power_settings_new</mat-icon> Cerrar Sesión</button>
+        </mat-menu>
+      }
     </div>
   </div>
 </div>
