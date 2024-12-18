@@ -31,13 +31,13 @@
 
 .comments {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 35px 1fr;
   gap: 20px;
   padding: 10px;
 }
 
 .comment-react {
-  width: 60px;
+  width: 35px;
   height: fit-content;
   display: grid;
   grid-template-columns: auto;
@@ -47,8 +47,8 @@
 }
 
 .comment-react button {
-  width: 60px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   position: relative;
   display: flex;
   align-items: center;
@@ -100,12 +100,12 @@
 }
 
 .comment-react span {
-  height: 40px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: #707277;
 }
@@ -205,8 +205,8 @@
 }
 
 .text-box .formatting button {
-  width: 60px;
-  height: 40px;
+  width: 35px;
+  height: 30px;
   position: relative;
   display: flex;
   align-items: center;
@@ -222,8 +222,8 @@
 }
 
 .text-box .formatting .send {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #0a84ff;
   margin: 0 0 0 auto;
   color: white;
@@ -246,9 +246,7 @@
 }
 
 
-
 /* Para pantallas menores a 768px (un tamaño común para tablets) */
 @media (max-width: 600px) {
 
 }
-
