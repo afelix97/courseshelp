@@ -31,7 +31,7 @@
 
 .comments {
   display: grid;
-  grid-template-columns: 35px 1fr;
+  grid-template-columns: 35px 3fr;
   gap: 20px;
   padding: 10px;
 }
@@ -201,7 +201,7 @@
 
 .text-box .formatting {
   display: grid;
-  grid-template-columns: auto auto auto auto auto 1fr;
+  grid-template-columns: auto auto auto auto auto 3fr;
 }
 
 .text-box .formatting button {
