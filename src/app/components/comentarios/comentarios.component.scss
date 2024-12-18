@@ -267,4 +267,9 @@
     top: -2.5px;
     width: 100% !important;
   }
+
+  .comments {
+    grid-template-columns: 50px 1fr;
+  }
+
 }
