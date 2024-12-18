@@ -30,19 +30,19 @@
     }
   </div>
 
+  @if (!isMobileDevice()) {
   <div [class.w-100]="isMobileDevice()">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
     </ul>
     <div class="d-flex">
-      @if (!isMobileDevice()) {
         <button mat-raised-button [class.w-100]="isMobileDevice()" [matMenuTriggerFor]="menuConfig" class="btn-config rounded-pill">Nombre usuario <mat-icon>settings</mat-icon></button>
         <mat-menu #menuConfig="matMenu" xPosition="after" class="bg-dark">
           <a routerLink="perfil" mat-menu-item class="text-white border"><mat-icon class="text-white">account_circle</mat-icon> Perfil</a>
           <button mat-menu-item class="text-white"><mat-icon class="text-danger">power_settings_new</mat-icon> Cerrar Sesión</button>
         </mat-menu>
-      }
+      </div>
     </div>
-  </div>
+  }
 </div>
 </nav>
