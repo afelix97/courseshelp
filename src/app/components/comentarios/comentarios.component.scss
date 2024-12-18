@@ -222,8 +222,8 @@
 }
 
 .text-box .formatting .send {
-  width: 40px;
-  height: 40px;
+  width: 43px;
+  height: 43px;
   background-color: #0a84ff;
   margin: 0 0 0 auto;
   color: white;
@@ -244,3 +244,11 @@
     opacity: 0;
   }
 }
+
+
+
+/* Para pantallas menores a 768px (un tamaño común para tablets) */
+@media (max-width: 600px) {
+
+}
+
