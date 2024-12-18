@@ -66,12 +66,13 @@
   left: -2.5px;
   top: -2.5px;
   background-color: #f5356e;
+  color: #f5356e;
   border-radius: 50%;
   z-index: 0;
   transform: scale(0);
 }
 
-.comment-react button svg {
+.comment-react button {
   position: relative;
   z-index: 9;
 }
@@ -80,11 +81,12 @@
   animation: ripple 0.6s ease-in-out forwards;
 }
 
-.comment-react button:hover svg {
+.comment-react button:hover  {
   fill: #f5356e;
+  color: #f5356e;
 }
 
-.comment-react button:hover svg path {
+.comment-react button:hover path {
   stroke: #f5356e;
   fill: #f5356e;
 }
@@ -203,7 +205,7 @@
 }
 
 .text-box .formatting button {
-  width: 30px;
+  width: 35px;
   height: 30px;
   position: relative;
   display: flex;
@@ -220,10 +222,11 @@
 }
 
 .text-box .formatting .send {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #0a84ff;
   margin: 0 0 0 auto;
+  color: white;
 }
 
 .text-box .formatting .send:hover {

@@ -12,15 +12,29 @@ import { WelcomeComponent } from '@pages/welcome/welcome.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'welcome' },
-  { path: 'login', component: LoginComponent },
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'cursos', component: AllCoursesComponent, },
-  { path: 'detalle-curso/:id', component: DetalleCursoComponent },
-  { path: 'curso-actividad/:id', component: CursoActividadComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'contacto', component: ContactoComponent },
-  { path: 'configuraciones', component: ConfiguracionesComponent },
-  { path: 'perfil', component: PerfilComponent },
+  {
+    path: 'login',
+    loadComponent: () => import('./pages/login/login.component').then((login) => login.LoginComponent)
+  },
+  { path: 'welcome', component: WelcomeComponent }, {
+    path: 'cursos',
+    loadComponent: () => import('./pages/cursos/all-courses/all-courses.component').then((courses) => courses.AllCoursesComponent)
+  }, {
+    path: 'detalle-curso/:id',
+    loadComponent: () => import('./pages/cursos/detalle-curso/detalle-curso.component').then((coursesDetail) => coursesDetail.DetalleCursoComponent)
+  }, {
+    path: 'curso-actividad/:id',
+    loadComponent: () => import('./pages/cursos/curso-actividad/curso-actividad.component').then((coursesActivity) => coursesActivity.CursoActividadComponent)
+  }, {
+    path: 'blog',
+    loadComponent: () => import('./pages/blog/blog.component').then((blog) => blog.BlogComponent)
+  }, {
+    path: 'contacto', loadComponent: () => import('./pages/contacto/contacto.component').then((contacto) => contacto.ContactoComponent)
+  }, {
+    path: 'configuraciones', loadComponent: () => import('./pages/configuraciones/configuraciones.component').then((configuraciones) => configuraciones.ConfiguracionesComponent)
+  }, {
+    path: 'perfil', loadComponent: () => import('./pages/perfil/perfil.component').then((perfil) => perfil.PerfilComponent)
+  },
   { path: 'page-not-found', component: PageNotFoundComponent }, //Wild Card Route for 404 request
   { path: '**', redirectTo: 'page-not-found' } //Wild Card Route for 404 request
 ];
