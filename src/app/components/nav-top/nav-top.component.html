@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div [class.w-100]="isMobileDevice()" [class.d-flex]="isMobileDevice()" [class.justify-content-between]="isMobileDevice()">
   @if (!appService.isExpandNavBar()) {
-      <a class="navbar-brand animated" [routerLink]="['welcome']"><img alt="logo sistema" class="img-fluid logoNav" src="img/logo/courseshelp.png"></a>
+      <a class="navbar-brand " [routerLink]="['welcome']"><img alt="logo sistema" class="img-fluid logoNav animate__animated animate__wobble" src="img/logo/courseshelp.png"></a>
   }
     <button mat-raised-button (click)="ocultarMenu()" class="rounded-pill m-1">
       @if (appService.isExpandNavBar()) {
